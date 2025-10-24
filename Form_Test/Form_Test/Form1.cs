@@ -34,6 +34,14 @@ namespace Form_Test
 
                     //ボタン内テキストの設定
                     testButton.Text = "あいうえお";
+                    //ボタンのイベント
+                    testButton.Click += button1_Click;
+                    /* private void button1_Click(object sender, EventArgs e)
+                    * {
+                    *    MessageBox.Show("C#の世界へようこそ!");
+                    * }
+                    * を呼び出している
+                    */
 
                     //コントロールボタンを追加
                     Controls.Add(testButton);
