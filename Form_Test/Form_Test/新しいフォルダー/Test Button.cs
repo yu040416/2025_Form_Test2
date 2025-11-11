@@ -28,6 +28,18 @@ namespace Form_Test
         /// <summary> 縦位置</summary>
         private int _y;
 
+        /// <summary>
+        /// 反転させる範囲のデータ
+        /// </summary>
+        private int[][] _toggleData =
+        {
+            new int[]{0,0 },
+            new int[]{1,0 },
+            new int[]{-1,0 },
+            new int[]{0,1 },
+            new int[]{0,-1 },
+        };
+
         public TestButton(Form1 form1, int x, int y, Size size, string text)
         {
             // Form1の参照を保管
@@ -65,6 +77,9 @@ namespace Form_Test
             }
         }
 
+        /// <summary>
+        /// 呼び出すたびにOnとOffを入れ替える関数
+        /// </summary>
         public void Toggle()
         {
             SetEnable(!_enable);
@@ -85,6 +100,7 @@ namespace Form_Test
             //_form1.GetTestButton(_x, _y + 1)?.Toggle();
             //_form1.GetTestButton(_x, _y - 1)?.Toggle();
 
+
             // かっちょいい書き方
             for (int i = 0; i < _toggleData.Length; i++)
             {
@@ -97,15 +113,5 @@ namespace Form_Test
                 }
             }
         }
-
-        private int[][] _toggleData =
-        {
-            new int[]{0,0 },
-            new int[]{1,0 },
-            new int[]{-1,0 },
-            new int[]{0,1 },
-            new int[]{0,-1 },
-        };
-
     }
 }

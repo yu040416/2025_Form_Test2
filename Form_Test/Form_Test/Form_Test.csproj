@@ -54,10 +54,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Test Button.cs">
+    <Compile Include="テストボタン.cs" />
+    <Compile Include="新しいフォルダー\Test Button.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="テストボタン.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
