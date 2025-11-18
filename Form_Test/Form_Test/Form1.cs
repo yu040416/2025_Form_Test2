@@ -98,7 +98,29 @@ namespace Form_Test
                 }
             }
         }
+        /// <summary>
+        /// 全ボタンがOnまたはOffかをチェックする
+        /// </summary>
+        public void CheckClear()
+        {
+            if (_buttonArray == null) return;
 
+            bool firstState = _buttonArray[0, 0]._IsEnabled(); // 最初のボタンの状態を基準にする
+
+            for (int x = 0; x < BOARD_SIZE_X; x++)
+            {
+                for (int y = 0; y < BOARD_SIZE_Y; y++)
+                {
+                    if (_buttonArray[y, x]._IsEnabled() != firstState)
+                    {
+                        return; // 1つでも違う状態があればクリアではない
+                    }
+                }
+            }
+
+            // 全部同じ状態ならクリア
+            MessageBox.Show("クリア！");
+        }
     }
 }
 

@@ -84,7 +84,10 @@ namespace Form_Test
         {
             SetEnable(!_enable);
         }
-
+        public bool _IsEnabled()
+        {
+            return _enable;
+        }
         /// <summary>
         /// 各ボタンがクリックされた時に呼び出される関数
         /// クリックイベント
@@ -110,8 +113,9 @@ namespace Form_Test
                 if (button != null)
                 {
                     button.Toggle();
-                }
+                }    
             }
+            _form1.CheckClear();
         }
     }
 }
